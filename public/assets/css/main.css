@@ -3938,7 +3938,7 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 10px;
   background: linear-gradient(#b2b2ba, #b2b2ba) padding-box, var(--tc-linear-3) border-box;
 }
