@@ -30,7 +30,11 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
 	title: "Sandeep Kumar Gupta – Personal Portfolio Website",
 	description: "Sandeep Kumar Gupta – Personal Portfolio Website",
+	icons: {
+		icon: "/favicon.ico",       
+	},
 }
+
 
 export default function RootLayout({
 	children,

@@ -1,52 +1,46 @@
 🚀 Sandeep Kumar Gupta – Portfolio Website
-A personal portfolio website built using Next.js, showcasing my experience, projects, skills, and professional profile as a Software Developer & IT Support Engineer. Designed to represent my work, resume, and online presence in a clean, modern, and responsive layout.
 
-🔗 Live Demo
-https://sandeepcv.netlify.app/
+A modern personal portfolio website built with Next.js to showcase my skills, projects, experience, and social presence as a Software Developer & IT Support Engineer.
+Designed to be fast, responsive, and visually appealing for personal branding and hiring purpose.
+
+
+
+🌐 Live Demo
+
+🔗 https://sandeepkgupta.netlify.app/
+
+
 
 👨‍💻 About Me
-I’m Sandeep Kumar Gupta, a Full-Stack Developer & IT Support Engineer with hands-on experience in:
-React, Next.js, Node.js & TypeScript
-API development with secure database handling (Prisma ORM)
-Linux server configuration & troubleshooting
-Social media content creation & branding using Canva & AI tools
-I enjoy building digital solutions that are fast, scalable, user-friendly, and visually creative.
+
+Hi, I’m Sandeep Kumar Gupta, a Full-Stack Developer & IT Support Engineer passionate about building interactive and scalable digital solutions.
+Experienced in React, Next.js, Node.js, TypeScript, Linux troubleshooting, and Canva-based branding content.
+I convert ideas into user-friendly web experiences with clean UI and modern development practices.
+
+
 
 🛠 Tech Stack
-Category	                Skills
-Frontend	                ReactJS, Next.js, TypeScript, JavaScript, HTML, CSS, Bootstrap
-Backend	                    Node.js, API Development
-Database/ORM	            Prisma ORM
-Tools	                    Git, GitHub, Postman
-System/IT	                Linux (Ubuntu/CentOS), VMware, Networking Basics
-Creative	                Canva Designing, Reels Editing, Branding Content
+
+I work mainly with ReactJS, Next.js, TypeScript, and JavaScript for frontend development, along with strong knowledge of HTML, CSS, and Bootstrap to build responsive user interfaces. On the backend, I use Node.js for API development and handle databases efficiently using Prisma ORM.
+I am comfortable working with development tools like Git, GitHub, and Postman, and I also possess system administration skills on Linux (Ubuntu/CentOS) including VMware environments and basic networking configuration.
+Alongside development, I also have creative expertise in Canva designing, social media posts, reels editing, and branding content creation, blending technical work with creative digital design.
 
 
-📌 Features
-Fully responsive portfolio website
-One-page smooth section navigation (#home, #projects, #skills, #resume…)
-Clean UI & modern look
-Project showcase section
-Contact form & social links
-SEO optimized structure for performance & ranking
-Fast deployable on Vercel, Netlify, or GitHub Pages
 
-Sandeep-Portfolio/
-├── app/
-│   └── page.tsx       # Single-page portfolio (Home2 version)
-├── components/
-│   ├── layout/
-│   └── sections/      # Home, Skills, Projects, Resume, etc.
-├── public/
-├── util/
-├── package.json
-├── README.md
-└── .gitignore
+✨ Features
+
+Fully responsive personal portfolio site
+Smooth single-page scroll navigation (#home, #projects, #skills, #resume, #contact…)
+Dedicated projects showcase
+Resume, skills & experience highlighted professionally
+Fast to deploy on Vercel / Netlify / GitHub Pages
+SEO-ready structure for better search visibility
 
 
-📞 Contact Me
-Feel free to connect for collaboration, hiring, or freelance work.
+
+🔗 Connect with Me
+
 📧 Email: Sandeepkumargupta254@gmail.com
-🔗 GitHub: https://github.com/Hackerbuddys
-🔗 LinkedIn: https://linkedin.com/in/sandeep-kumar-gupta-8679b8230
-🔗 YouTube: https://youtube.com/Hackerbuddys
+🐙 GitHub: https://github.com/Hackerbuddys
+💼 LinkedIn: https://linkedin.com/in/sandeep-kumar-gupta-8679b8230
+▶ YouTube: https://youtube.com/Hackerbuddys

@@ -15,8 +15,10 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 							</a>
 							<div className="container py-3 px-4">
 								<Link className="navbar-brand d-flex main-logo align-items-center" href="/">
-									<img src="assets/imgs/home-page-2/template/favicon.svg" alt="sandeep-portfolio" />
-									<span className="fs-4 ms-2">James.dev</span>
+									<img src="/assets/imgs/sandeep.png"  
+                                        alt="Sandeep Kumar Gupta Logo"
+                                        style={{ height: "55px", width: "190px" }} />
+									{/* <span className="fs-4 ms-2">Sandeep Gupta</span> */}
 								</Link>
 								<div className="d-none d-lg-flex">
 									<div className="collapse navbar-collapse" id="navbarSupportedContent">
