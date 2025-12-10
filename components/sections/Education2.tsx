@@ -20,37 +20,31 @@ export default function Education2() {
 										<ul className="ps-3">
 											<li className="position-relative z-1 mb-3">
 												<div className="d-flex gap-2">
-													<p className="text-300 text-nowrap fw-regular mb-0">2020-2024:</p>
+													<p className="text-300 text-nowrap fw-regular mb-0">2019-2022:</p>
 													<div>
-														<span className="text-primary-2">MIT</span>
-														<p className="text-dark">Bachelor’s Degree in Computer Science</p>
+														<span className="text-primary-2">Guru Nanak College</span>
+														<p className="text-secondary-2">Bachelor of Science in Information Technology</p>
+														<p className="text-dark">Studied programming, databases, networking, and full-stack development fundamentals.</p>
 													</div>
 												</div>
 											</li>
 											<li className="position-relative z-1 mb-3">
 												<div className="d-flex gap-2">
-													<p className="text-300 text-nowrap fw-regular mb-0">2018-2019:</p>
+													<p className="text-300 text-nowrap fw-regular mb-0">2017-2019:</p>
 													<div>
-														<span className="text-primary-2">Harvard University</span>
-														<p className="text-dark">Certification in React and Redux, Node.js Developer Course</p>
+														<span className="text-primary-2">HSC (Science Stream)</span>
+														<p className="text-secondary-2">Shri Gauridutt Mittal Junior College</p>
+														<p className="text-dark">Focused on computer science basics, logical reasoning, and analytical skills.</p>
 													</div>
 												</div>
 											</li>
 											<li className="position-relative z-1 mb-3">
 												<div className="d-flex gap-2">
-													<p className="text-300 text-nowrap fw-regular mb-0">2015-2016:</p>
+													<p className="text-300 text-nowrap fw-regular mb-0">2016-2017:</p>
 													<div>
-														<span className="text-primary-2">Stanford University</span>
-														<p className="text-dark">Certification in Full Stack Web Development</p>
-													</div>
-												</div>
-											</li>
-											<li className="position-relative z-1 mb-3">
-												<div className="d-flex gap-2">
-													<p className="text-300 text-nowrap fw-regular mb-0">2013-2015:</p>
-													<div>
-														<span className="text-primary-2">University of Washington</span>
-														<p className="text-dark">Certification in React and Redux, Node.js Developer Course</p>
+														<span className="text-primary-2">SSC (Maharashtra Board)</span>
+														<p className="text-secondary-2">Satyam Hindi High School</p>
+														<p className="text-dark">Completed foundational academics with strong interest in computers and technology.</p>
 													</div>
 												</div>
 											</li>
@@ -67,38 +61,47 @@ export default function Education2() {
 									<svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 32 32" fill="none">
 										<path className="fill-primary-2" d="M20 4H28V10.6667H25.3333V6.66667H20V4ZM12 4V6.66667H6.66667V10.6667H4V4H12ZM20 28V25.3333H25.3333V21.3333H28V28H20ZM12 28H4V21.3333H6.66667V25.3333H12V28ZM4 14.6667H28V17.3333H4V14.6667Z" fill="#A8FF53" />
 									</svg>
-									<h2 className="mb-0 ms-2">Researched</h2>
+									<h2 className="mb-0 ms-2">Certifications</h2>
 								</div>
 								<div className="d-flex flex-column h-100 position-relative mt-5">
 									<ul className="ps-3">
 										<li className="position-relative z-1 mb-3">
 											<div className="d-flex gap-2">
-												<p className="text-300 text-nowrap fw-regular mb-0">2023-2024:</p>
+												<p className="text-300 text-nowrap fw-regular mb-0">2025: </p>
 												<div>
-													<span className="text-primary-2">Advanced Data Analytics with Big Data Tools</span>
-													<p className="text-dark">Utilized big data tools for advanced analytics and insights.</p>
+													<span className="text-primary-2">Canva Masterclass – Content Creation</span>
+													<p className="text-dark">Learned professional design techniques for branding, reels, and social media graphics.</p>
 												</div>
 											</div>
 										</li>
 										<li className="position-relative z-1 mb-3">
 											<div className="d-flex gap-2">
-												<p className="text-300 text-nowrap fw-regular mb-0">2021-2013:</p>
+												<p className="text-300 text-nowrap fw-regular mb-0">2024: </p>
 												<div>
-													<span className="text-primary-2">Cloud-Native Application Architectures</span>
-													<p className="text-dark">Studied best practices for designing cloud-native applications.</p>
+													<span className="text-primary-2">Mastering JavaScript Fundamentals – Geekster</span>
+													<p className="text-dark">Built strong understanding of JavaScript concepts, logic building, and DOM handling.</p>
 												</div>
 											</div>
 										</li>
 										<li className="position-relative z-1 mb-3">
 											<div className="d-flex gap-2">
-												<p className="text-300 text-nowrap fw-regular mb-0">2019-2020:</p>
+												<p className="text-300 text-nowrap fw-regular mb-0">2023: </p>
 												<div>
-													<span className="text-primary-2">AI-Driven User Experience Personalization</span>
-													<p className="text-dark">Leveraged AI to personalize user experiences based on behavior.</p>
+													<span className="text-primary-2">Git, GitHub & Markdown Crash Course – Udemy</span>
+													<p className="text-dark">Gained practical skills in version control, collaboration, and documentation workflows.</p>
 												</div>
 											</div>
 										</li>
 									</ul>
+									<li className="position-relative z-1 mb-3">
+											<div className="d-flex gap-2">
+												<p className="text-300 text-nowrap fw-regular mb-0">2022: </p>
+												<div>
+													<span className="text-primary-2">Linux Terminal (Beginner to Advanced)</span>
+													<p className="text-dark">Developed hands-on skills in Linux commands, server navigation, and troubleshooting.</p>
+												</div>
+											</div>
+										</li>
 									<div className="line-left position-absolute top-0 border-start z-0" />
 								</div>
 								<div className="bg-overlay position-absolute bottom-0 start-0 z-1" />
