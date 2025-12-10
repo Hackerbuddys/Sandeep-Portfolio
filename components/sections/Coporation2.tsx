@@ -131,17 +131,17 @@ export default function Coporation2() {
 												</div>
 											</div>
 											<div className="d-flex flex-column gap-2">
-												<Link href="#">
-													<i className="ri-skype-fill" />
-													<span className="text-300">[skype] <span className="text-secondary-2">james.dev</span></span>
+												<Link href="https://youtube.com/@realunseenshadow?si=d6w8F087sfkLC2uL">
+													<i className="ri-youtube-fill" />
+													<span className="text-300">[youtube] <span className="text-secondary-2">@RealUnseenShadow</span></span>
 												</Link>
-												<Link href="#">
+												<Link href="tel:+917506483883">
 													<i className="ri-phone-fill" />
-													<span className="text-300">[phone] <span className="text-secondary-2">+1-234-567-8901</span></span>
+													<span className="text-300">[phone] <span className="text-secondary-2">+91-750-648-3883</span></span>
 												</Link>
-												<Link href="#">
+												<Link href="mailto:sandeepkumargupta254@gmail.com">
 													<i className="ri-mail-fill" />
-													<span className="text-300">[email] <span className="text-secondary-2">contact@james.dev</span></span>
+													<span className="text-300">[email] <span className="text-secondary-2">sandeepkumargupta254@gmail.com</span></span>
 												</Link>
 											</div>
 										</div>
