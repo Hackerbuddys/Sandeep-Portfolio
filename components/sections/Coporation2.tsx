@@ -19,7 +19,7 @@ export default function Coporation2() {
 											<span className="text-linear-4 d-flex align-items-center"> Cooperation </span>
 										</div>
 										<h3 className="fw-medium">
-											More than +168 <span className="text-300">companies <br /></span> trusted <span className="text-300">worldwide_</span>
+											More than 4+ years of <span className="text-300">combined <br /></span> experience across development &<span className="text-300"> IT support_</span>
 										</h3>
 										<div className="my-5 border border-1 rounded-2 p-3">
 											{/* Carausel Scroll */}
@@ -176,32 +176,26 @@ export default function Coporation2() {
 									<ul className="ps-3 d-flex flex-column justify-content-around h-100 position-relative">
 										<li className="position-relative z-1">
 											<div className="d-flex align-items-center gap-2">
-												<p className="text-300 text-nowrap">15 Jul:</p>
-												<span className="text-dark">Muzzilla-streaming-API-services-for-Python</span>
+												<p className="text-300 text-nowrap">Jul 24:</p>
+												<span className="text-dark">Website Designer, Software Developer — WordPress, UI/UX </span>
 											</div>
 										</li>
 										<li className="position-relative z-1">
 											<div className="d-flex align-items-center gap-2">
-												<p className="text-300 text-nowrap">30 Jun:</p>
-												<span className="text-dark">ChatHub-Chat-application-VueJs-Mongodb</span>
+												<p className="text-300 text-nowrap">Nov 23:</p>
+												<span className="text-dark">Full-Stack Developer — Whistleblower System using Node.js, Next.js, React.js</span>
 											</div>
 										</li>
 										<li className="position-relative z-1">
 											<div className="d-flex align-items-center gap-2">
-												<p className="text-300 text-nowrap">26 May:</p>
-												<span className="text-dark">DineEasy-coffee-tea-reservation-system</span>
+												<p className="text-300 text-nowrap">Oct 22:</p>
+												<span className="text-dark">Technical Support Engineer — Linux, VoIP, Networking & System Troubleshooting</span>
 											</div>
 										</li>
 										<li className="position-relative z-1">
 											<div className="d-flex align-items-center gap-2">
-												<p className="text-300 text-nowrap">17 Apr:</p>
-												<span className="text-dark">FinanceBuddy-Personal-finance-tracker</span>
-											</div>
-										</li>
-										<li className="position-relative z-1">
-											<div className="d-flex align-items-center gap-2">
-												<p className="text-300 text-nowrap">05 Mar:</p>
-												<span className="text-dark">TuneStream-Music-streaming-service-API</span>
+												<p className="text-300 text-nowrap">Aug 25:</p>
+												<span className="text-dark">Content Designer — Canva, AI Tools, Social Media Marketing</span>
 											</div>
 										</li>
 									</ul>
