@@ -13,7 +13,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 							<a className="navbar-menu p-4 text-center square-100 menu-tigger icon_80 icon-shape d-none d-md-flex" data-bs-target=".offCanvas__info" aria-controls="offCanvas__info" onClick={handleOffCanvas}>
 								<i className="ri-menu-2-line" />
 							</a>
-							<div className="container py-3 px-4">
+							<div className="container py-3 px-5">
 								<Link className="navbar-brand d-flex main-logo align-items-center" href="/">
 									<img src="/assets/imgs/sandeep.png"  
                                         alt="Sandeep Kumar Gupta Logo"
@@ -27,16 +27,16 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 												<Link className="nav-link active" href="#about">About me</Link>
 											</li>
 											<li className="nav-item">
-												<Link className="nav-link" href="#resume">Resume</Link>
+												<Link className="nav-link" href="#education">Education</Link>
 											</li>
 											<li className="nav-item">
 												<Link className="nav-link" href="#services">Services</Link>
 											</li>
 											<li className="nav-item">
-												<Link className="nav-link" href="#portfolio">Portfolio</Link>
+												<Link className="nav-link" href="#expericence">Expericence</Link>
 											</li>
 											<li className="nav-item">
-												<Link className="nav-link" href="#blog">Blog</Link>
+												<Link className="nav-link" href="#project">Project</Link>
 											</li>
 											<li className="nav-item">
 												<Link className="nav-link" href="#contact">Contact</Link>
@@ -46,16 +46,16 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 								</div>
 								<div className="navbar-social d-flex align-items-center pe-5 pe-lg-0 me-5 me-lg-0">
 									<div className="d-md-flex d-none gap-3">
-										<Link href="/http://facebook.com">
-											<i className="ri-facebook-circle-fill fs-18" />
+										<Link href="https://wa.me/917506483883" target="_blank">
+											<i className="ri-whatsapp-fill fs-18" />
 										</Link>
-										<Link href="/http://twitter.com">
-											<i className="ri-twitter-x-fill fs-18" />
+										<Link href="mailto:sandeepkumargupta254@gmail.com">
+											<i className="ri-mail-fill fs-18" />
 										</Link>
-										<Link href="/http://linkedin.com">
+										<Link href="https://www.linkedin.com/in/sandeep-kumar-gupta-8679b8230/">
 											<i className="ri-linkedin-fill fs-18" />
 										</Link>
-										<Link href="/http://github.com">
+										<Link href="https://github.com/Hackerbuddys">
 											<i className="ri-github-fill fs-18" />
 										</Link>
 									</div>

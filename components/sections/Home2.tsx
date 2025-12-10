@@ -22,13 +22,13 @@ export default function Home2() {
 								<div className="col-lg-6 mx-lg-auto col-md-12">
 									<div className="p-lg-0 p-md-8 p-3">
 										<div className="text-secondary-2 d-flex align-items-center">
-											&lt;span&gt;
+											&lt;&gt;
 											<div className="text-dark">
 												<div className="typewriter">
-													<h1 className="fs-6 fw-medium">Hey, I'm Sandeep Kumar Gupta</h1>
+													<h1 className="fs-6 fw-medium">Hey, I'm Sandeep Gupta</h1>
 												</div>
 											</div>
-											&lt;/span&gt;
+											&lt;/&gt;
 										</div>
 										<h1 className="fs-50 my-3">Senior <span className="text-linear-4">{'{'}Full Stack{'}'}</span>IT Support &amp; Social Media Designer<span className="flicker">_</span></h1>
 										<p className="mb-6 text-secondary-2">&lt;p&gt;<span className="text-dark">With expertise in cutting-edge technologies such as</span> <span className="text-secondary-2">NodeJS</span>, <span className="text-secondary-2">React</span>, <span className="text-secondary-2">Angular</span>, and <span className="text-secondary-2">Laravel</span><span className="text-dark">... I deliver web solutions that are both innovative and robust.</span>&lt;/p&gt;</p>
@@ -69,7 +69,7 @@ export default function Home2() {
 												<span className="fs-6 text-300 mb-2">...and more</span>
 											</div>
 										</div>
-										<Link href="assets/resume.pdf" className="btn me-2 text-300 ps-0 mt-4" target="_blank">
+										<Link href="assets/Sandeep-Kumar-Gupta.pdf" className="btn me-2 text-300 ps-0 mt-4" target="_blank">
 											<i className="ri-download-line text-primary-2" />
 											[ Download my CV ]
 										</Link>

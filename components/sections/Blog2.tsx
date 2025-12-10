@@ -6,7 +6,7 @@ export default function Blog2() {
 	return (
 		<>
 
-			<section id="blog" className="section-blog-2 position-relative pt-60 pb-60">
+			<section id="project" className="section-blog-2 position-relative pt-60 pb-60">
 				<div className="container">
 					<div className="text-center">
 						<div className="d-flex align-items-center justify-content-center">

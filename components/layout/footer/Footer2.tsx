@@ -8,19 +8,19 @@ export default function Footer2() {
 						<div className="text-center">
 							<a className="d-flex main-logo align-items-center justify-content-center mb-3">
 								<img src="assets/imgs/home-page-2/template/favicon.svg" alt="sandeep-portfolio" />
-								<span className="fs-4 ms-2">Sandeep Gupta</span>
+								<span className="fs-4 ms-2">Sandeep Kumar Gupta</span>
 							</a>
 							<div className="d-flex justify-content-center gap-3">
-								<a href="http://facebook.com">
-									<i className="ri-facebook-circle-fill fs-18" />
+								<a href="https://wa.me/917506483883">
+									<i className="ri-whatsapp-fill fs-18" />
 								</a>
-								<a href="http://twitter.com">
-									<i className="ri-twitter-x-fill fs-18" />
+								<a href="mailto:sandeepkumargupta254@gmail.com">
+									<i className="ri-mail-fill fs-18" />
 								</a>
-								<a href="http://linkedin.com">
+								<a href="https://www.linkedin.com/in/sandeep-kumar-gupta-8679b8230/">
 									<i className="ri-linkedin-fill fs-18" />
 								</a>
-								<a href="http://github.com">
+								<a href="https://github.com/Hackerbuddys">
 									<i className="ri-github-fill fs-18" />
 								</a>
 							</div>

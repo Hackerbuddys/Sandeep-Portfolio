@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	title: "Sandeep Kumar Gupta – Personal Portfolio Website",
 	description: "Sandeep Kumar Gupta – Personal Portfolio Website",
 	icons: {
-		icon: "/favicon.ico",       
+		icon: "/favicon.ico",          // or /favicon.png / favicon.svg
 	},
 }
 
