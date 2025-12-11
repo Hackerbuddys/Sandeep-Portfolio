@@ -8,129 +8,139 @@ export default function Contact2() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [msg, setMsg] = useState<string>("");
 
+  const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const ADMIN_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const CLIENT_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_CLIENT_TEMPLATE_ID;
+  const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const showError = (text: string) => {
+    setStatus("error");
+    setMsg(text);
+    setTimeout(() => {
+      setStatus("idle");
+      setMsg("");
+    }, 6000);
+  };
+
+  const showSuccess = (text: string) => {
+    setStatus("success");
+    setMsg(text);
+    setTimeout(() => {
+      setStatus("idle");
+      setMsg("");
+    }, 4000);
+  };
+
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formRef.current || status === "sending") return;
+    if (!formRef.current) return;
+    if (status === "sending") return;
+
+    // Quick env check
+    if (!SERVICE_ID || !PUBLIC_KEY || (!ADMIN_TEMPLATE_ID && !CLIENT_TEMPLATE_ID)) {
+      console.error("Missing EmailJS environment variables.", {
+        SERVICE_ID,
+        ADMIN_TEMPLATE_ID,
+        CLIENT_TEMPLATE_ID,
+        PUBLIC_KEY,
+      });
+      showError("Email service is not configured. Please contact the site owner.");
+      return;
+    }
+
+    const form = formRef.current;
+    const name = (form.elements.namedItem("name") as HTMLInputElement)?.value?.trim() || "";
+    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value?.trim() || "";
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value?.trim() || "";
+    const subject = (form.elements.namedItem("subject") as HTMLInputElement)?.value?.trim() || "";
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value?.trim() || "";
+
+    // Basic validation
+    if (!name) {
+      showError("Please enter your name.");
+      return;
+    }
+    if (!email || !isValidEmail(email)) {
+      showError("Please enter a valid email address.");
+      return;
+    }
+    if (!message) {
+      showError("Please enter a message.");
+      return;
+    }
 
     setStatus("sending");
     setMsg("");
 
-    const form = formRef.current;
-    const name = (form.elements.namedItem("name") as HTMLInputElement)?.value || "";
-    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value || "";
-    const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value || "";
-    const subject = (form.elements.namedItem("subject") as HTMLInputElement)?.value || "";
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value || "";
+    // Build promises safely (only create each promise if its template id exists)
+    const promises: Promise<any>[] = [];
 
-    // Prepare promises
-    const adminPromise = emailjs.sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // admin template — make sure To Email is set to your inbox in EmailJS
-      form,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-    );
+    // Admin send: recommended to keep ADMIN_TEMPLATE_ID configured so To Email is a real address in EmailJS dashboard
+    if (ADMIN_TEMPLATE_ID) {
+      try {
+        // sendForm uses the form values directly (recommended for admin notification templates)
+        promises.push(
+          emailjs.sendForm(SERVICE_ID, ADMIN_TEMPLATE_ID, form, PUBLIC_KEY)
+        );
+      } catch (err) {
+        // Should not normally throw here, but catch to avoid crash
+        console.error("prepare admin send error:", err);
+      }
+    }
 
-    const clientPromise = emailjs.send(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_CLIENT_TEMPLATE_ID!, // client auto-reply template — To Email = {{email}}
-      {
-        from_name: name,
-        from_email: email,
-        phone,
-        subject,
-        message,
-      },
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-    );
+    // Client auto-reply: send only if CLIENT_TEMPLATE_ID exists
+    if (CLIENT_TEMPLATE_ID) {
+      try {
+        promises.push(
+          emailjs.send(SERVICE_ID, CLIENT_TEMPLATE_ID, {
+            from_name: name,
+            from_email: email,
+            phone,
+            subject,
+            message,
+          }, PUBLIC_KEY)
+        );
+      } catch (err) {
+        console.error("prepare client send error:", err);
+      }
+    }
+
+    if (promises.length === 0) {
+      showError("Email templates are not configured. Please contact the site owner.");
+      return;
+    }
 
     try {
-      // Run both requests in parallel and inspect results
-      const results = await Promise.allSettled([adminPromise, clientPromise]);
+      const results = await Promise.allSettled(promises);
 
-      const adminResult = results[0];
-      const clientResult = results[1];
+      // Determine if any succeeded
+      const anyFulfilled = results.some(r => r.status === "fulfilled");
+      const anyRejected = results.some(r => r.status === "rejected");
 
-      // Check statuses
-      const adminFulfilled = adminResult.status === "fulfilled";
-      const clientFulfilled = clientResult.status === "fulfilled";
+      // Log rejections for debugging
+      results.forEach((r, idx) => {
+        if (r.status === "rejected") {
+          console.warn(`EmailJS promise[${idx}] rejected:`, r.reason);
+        }
+      });
 
-      // If admin failed but client succeeded → success for user (but log admin error)
-      if (adminFulfilled || clientFulfilled) {
-        setStatus("success");
-        setMsg("Message sent — I will get back to you soon.");
+      if (anyFulfilled) {
+        // Success for the user if at least one email was sent
         form.reset();
-
-        // Auto-hide success after 4s
-        setTimeout(() => {
-          setStatus("idle");
-          setMsg("");
-        }, 4000);
-
-        // If any rejected, log details for debugging
-        if (!adminFulfilled) {
-          // admin failed — log reason
-          // eslint-disable-next-line no-console
-          console.warn("Admin email failed:", adminResult);
-        }
-        if (!clientFulfilled) {
-          // client failed — log reason
-          // eslint-disable-next-line no-console
-          console.warn("Client auto-reply failed:", clientResult);
-        }
-
-        // Optionally: if admin failed with 422 (recipient missing), try fallback send using explicit params
-        if (!adminFulfilled && adminResult.status === "rejected") {
-          const err: any = adminResult.reason;
-          if (err?.status === 422) {
-            console.warn("Admin send returned 422 - recipient missing. Attempting fallback send with explicit params.");
-            try {
-              // fallback using emailjs.send and explicit variables (requires template that accepts these fields)
-              await emailjs.send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // same template if it accepts params in body
-                {
-                  to_email: "sandeepkumargupta254@gmail.com",
-                  from_name: name,
-                  from_email: email,
-                  phone,
-                  subject,
-                  message,
-                },
-                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-              );
-              // fallback succeeded
-              console.info("Fallback admin send succeeded.");
-            } catch (fallbackErr) {
-              console.error("Fallback admin send failed:", fallbackErr);
-            }
-          }
-        }
-
+        showSuccess("Message sent — I will get back to you soon.");
         return;
       }
 
-      // If both rejected -> treat as error
-      // show friendly message but keep detailed logs in console
-      // eslint-disable-next-line no-console
-      console.error("Both EmailJS requests failed:", { adminResult, clientResult });
-      setStatus("error");
-      setMsg("Something went wrong. Please try again later.");
-
-      setTimeout(() => {
-        setStatus("idle");
-        setMsg("");
-      }, 6000);
-    } catch (error) {
-      // unexpected error while handling promises
-      // eslint-disable-next-line no-console
-      console.error("Unexpected EmailJS error:", error);
-      setStatus("error");
-      setMsg("Something went wrong. Please try again later.");
-
-      setTimeout(() => {
-        setStatus("idle");
-        setMsg("");
-      }, 6000);
+      // If here, all failed
+      console.error("All Email requests failed:", results);
+      showError("Something went wrong. Please try again later.");
+    } catch (err) {
+      console.error("Unexpected error sending emails:", err);
+      showError("Something went wrong. Please try again later.");
     }
   };
 
@@ -143,41 +153,87 @@ export default function Contact2() {
               <div className="position-relative z-2">
                 <h3 className="text-primary-2 mb-3">Let’s connect</h3>
 
-                <form ref={formRef} onSubmit={sendEmail}>
+                <form ref={formRef} onSubmit={sendEmail} noValidate>
                   <div className="row g-3">
                     <div className="col-md-6">
-                      <input type="text" name="name" className="form-control bg-3 border border-1 rounded-3" placeholder="Your name" required />
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control bg-3 border border-1 rounded-3"
+                        placeholder="Your name"
+                        required
+                        aria-label="Your name"
+                      />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="text" name="phone" className="form-control bg-3 border border-1 rounded-3" placeholder="Phone" />
+                      <input
+                        type="text"
+                        name="phone"
+                        className="form-control bg-3 border border-1 rounded-3"
+                        placeholder="Phone"
+                        aria-label="Phone"
+                      />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="email" name="email" className="form-control bg-3 border border-1 rounded-3" placeholder="Email" required />
+                      <input
+                        type="email"
+                        name="email"
+                        className="form-control bg-3 border border-1 rounded-3"
+                        placeholder="Email"
+                        required
+                        aria-label="Email"
+                      />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="text" name="subject" className="form-control bg-3 border border-1 rounded-3" placeholder="Subject" />
+                      <input
+                        type="text"
+                        name="subject"
+                        className="form-control bg-3 border border-1 rounded-3"
+                        placeholder="Subject"
+                        aria-label="Subject"
+                      />
                     </div>
 
                     <div className="col-12">
-                      <textarea name="message" className="form-control bg-3 border border-1 rounded-3" placeholder="Message" rows={4} required />
+                      <textarea
+                        name="message"
+                        className="form-control bg-3 border border-1 rounded-3"
+                        placeholder="Message"
+                        rows={4}
+                        required
+                        aria-label="Message"
+                      />
                     </div>
 
                     <div className="col-12">
-                      <button type="submit" className="btn btn-primary-2 rounded-2" disabled={status === "sending"}>
+                      <button
+                        type="submit"
+                        className="btn btn-primary-2 rounded-2"
+                        disabled={status === "sending"}
+                        aria-busy={status === "sending"}
+                      >
                         {status === "sending" ? "Sending..." : "Send Message"}
-                        <i className="ri-arrow-right-up-line" />
+                        <i className="ri-arrow-right-up-line" style={{ marginLeft: 8 }} />
                       </button>
                     </div>
 
-                    {/* status message */}
+                    {/* status message (uses your color utilities) */}
                     {status === "success" && (
-                      <div className="col-12 mt-2 text-success text-secondary-2">{msg}</div>
+                      <div className="col-12 mt-2">
+                        <div className="p-2 rounded-2 text-white" style={{ background: "#1f8a3b" }}>
+                          {msg}
+                        </div>
+                      </div>
                     )}
                     {status === "error" && (
-                      <div className="col-12 mt-2 text-danger text-secondary-2">{msg}</div>
+                      <div className="col-12 mt-2">
+                        <div className="p-2 rounded-2 text-white" style={{ background: "#c53030" }}>
+                          {msg}
+                        </div>
+                      </div>
                     )}
                   </div>
                 </form>
@@ -206,7 +262,7 @@ export default function Contact2() {
               </div>
               <div className="ps-3">
                 <span className="text-400 fs-6">Email</span>
-                <h6 className="mb-0">sandeepkumargupta254@gmail.com</h6>
+                <h6 className="mb-0">Sandeep Gupta</h6>
               </div>
               <a href="mailto:sandeepkumargupta254@gmail.com" className="position-absolute top-0 start-0 w-100 h-100" />
             </div>
@@ -228,7 +284,7 @@ export default function Contact2() {
               </div>
               <div className="ps-3">
                 <span className="text-400 fs-6">Address</span>
-                <h6 className="mb-0">GTB Nagar Metro Station Gate No.3, Delhi - 110009</h6>
+                <h6 className="mb-0">GTB Nagar, DL-110009</h6>
               </div>
               <a href="#" className="position-absolute top-0 start-0 w-100 h-100" />
             </div>
