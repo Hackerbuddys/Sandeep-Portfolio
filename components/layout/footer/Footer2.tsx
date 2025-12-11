@@ -26,10 +26,10 @@ export default function Footer2() {
 							</div>
 							<div className="navigation d-flex align-items-center justify-content-center flex-wrap gap-4 my-4">
 								<a href="#about" className="fs-6"> About me </a>
-								<a href="#resume" className="fs-6"> Resume </a>
+								<a href="#education" className="fs-6"> Education </a>
 								<a href="#services" className="fs-6"> Services </a>
-								<a href="#portfolio" className="fs-6"> Portfolio </a>
-								<a href="#blog" className="fs-6"> Blog </a>
+								<a href="#expericence" className="fs-6"> Expericence </a>
+								<a href="#project" className="fs-6"> Project </a>
 								<a href="#contact" className="fs-6"> Contact </a>
 							</div>
 						</div>
