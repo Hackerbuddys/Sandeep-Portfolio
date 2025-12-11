@@ -47,37 +47,37 @@ export default function Projects2() {
 												<div className="p-lg-5 p-md-4 p-3 border border-1 mt-5 bg-3">
 													<div className="row">
 														<div className="col-lg-5">
-															<img className="w-100" src="assets/imgs/home-page-2/projects/img-1.png" alt="sandeep-portfolio" />
+															<img className="w-100" src="assets/imgs/home-page-2/projects/vaishnodevitrust.png" alt="sandeep-portfolio" />
 														</div>
 														<div className="col-lg-7 ps-lg-5 mt-5 mt-lg-0">
 															<h4 className="text-linear-4">
-																Integrate AI into the <br />
-																ecommerce system
+																Vaishnodevi Charitable Trust <br />
+																NGO Website
 															</h4>
-															<p>Developed an online learning platform with course management, quizzes, and progress tracking.</p>
+															<p>Designed and developed a complete NGO website with structured donation flows, membership features, volunteer onboarding, and trust information pages. The platform is optimized for performance, accessibility, SEO, and mobile responsiveness.</p>
 															<ul className="mt-4 list-unstyled">
 																<li className="text-secondary-2 mb-3 border-bottom pb-3">Project Info</li>
 																<li className="text-dark mb-3 border-bottom pb-3">
 																	<div className="d-flex justify-content-between">
 																		<p className="text-dark mb-0 text-end">Client</p>
-																		<p className="text-300 mb-0 text-end">Conceptual JSC</p>
+																		<p className="text-300 mb-0 text-end">Vaishnodevi Trust</p>
 																	</div>
 																</li>
 																<li className="text-dark mb-3 border-bottom pb-3">
 																	<div className="d-flex justify-content-between">
 																		<p className="text-dark mb-0 text-end">Completion Time</p>
-																		<p className="text-300 mb-0 text-end">6 months</p>
+																		<p className="text-300 mb-0 text-end">2 months</p>
 																	</div>
 																</li>
 																<li className="text-dark mb-3 border-bottom pb-3">
 																	<div className="d-flex justify-content-between">
 																		<p className="text-dark mb-0 text-end">Technologies</p>
-																		<p className="text-300 mb-0 text-end">Node.js, React, MongoDB, Stripe</p>
+																		<p className="text-300 mb-0 text-end">WordPress</p>
 																	</div>
 																</li>
 															</ul>
 															<div className="d-flex flex-wrap align-items-center gap-3 mt-7">
-																<Link href="#" className="text-300 border-bottom border-1 px-2 pb-2 link-hover">
+																<Link href="https://vaishnodevitrust.likesyou.org/" className="text-300 border-bottom border-1 px-2 pb-2 link-hover">
 																	<svg xmlns="http://www.w3.org/2000/svg" width={13} height={13} viewBox="0 0 13 13" fill="none">
 																		<path d="M11.0037 3.91421L2.39712 12.5208L0.98291 11.1066L9.5895 2.5H2.00373V0.5H13.0037V11.5H11.0037V3.91421Z" fill="#8F8F92" />
 																	</svg>

@@ -6,7 +6,6 @@ Designed to be fast, responsive, and visually appealing for personal branding an
 
 
 🌐 Live Demo
-
 🔗 https://sandeepkgupta.netlify.app/
 
 
@@ -29,12 +28,12 @@ Alongside development, I also have creative expertise in Canva designing, social
 
 ✨ Features
 
-Fully responsive personal portfolio site
-Smooth single-page scroll navigation (#home, #projects, #skills, #resume, #contact…)
-Dedicated projects showcase
-Resume, skills & experience highlighted professionally
-Fast to deploy on Vercel / Netlify / GitHub Pages
-SEO-ready structure for better search visibility
+>Fully responsive personal portfolio site
+>Smooth single-page scroll navigation
+>Dedicated projects showcase
+>Resume, skills & experience highlighted professionally
+>Fast to deploy on Vercel / Netlify / GitHub Pages
+>SEO-ready structure for better search visibility
 
 
 
