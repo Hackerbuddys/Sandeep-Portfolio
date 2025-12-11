@@ -42,21 +42,34 @@ export default function Skills2() {
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-2.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/Typescript.png" alt="brand" />
 																</Link>
-																<span className="tool-tip">Firebase</span>
+																<span className="tool-tip">TypeScript</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-3.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/Wordpress.png" alt="brand" />
 																</Link>
-																<span className="tool-tip">MongoDB</span>
+																<span className="tool-tip">WordPress</span>
+															</li>
+															
+															<li className="carouselTicker__item mt-6">
+																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
+																	<img src="assets/imgs/home-page-2/hero-1/Linux.png" alt="brand" />
+																</Link>
+																<span className="tool-tip">Linux</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-6.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/MySQL.png" alt="brand" />
 																</Link>
-																<span className="tool-tip">React</span>
+																<span className="tool-tip">MySQL</span>
+															</li>
+															<li className="carouselTicker__item mt-6">
+																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
+																	<img src="assets/imgs/home-page-2/hero-1/Prisma.png" alt="brand" />
+																</Link>
+																<span className="tool-tip">Prisma</span>
 															</li>
 														</ul>
 													</Marquee>
@@ -67,27 +80,27 @@ export default function Skills2() {
 														<ul className="carouselTicker__list m-0 ">
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-7.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/PostgreSQL.png" alt="brand" />
 																</Link>
-																<span className="tool-tip">VueJS</span>
+																<span className="tool-tip">PostgreSQL</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-8.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/JavaScript.png" alt="brand" />
 																</Link>
-																<span className="tool-tip">Angular</span>
+																<span className="tool-tip">JavaScript</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-9.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/icon-6.svg" alt="brand" />
 																</Link>
-																<span className="tool-tip">Laravel</span>
+																<span className="tool-tip">React</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-5.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/Bootstrap.png" alt="brand" />
 																</Link>
-																<span className="tool-tip">Tailwind</span>
+																<span className="tool-tip">Bootstrap</span>
 															</li>
 														</ul>
 													</Marquee>
@@ -108,7 +121,7 @@ export default function Skills2() {
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
 																	<p className="text-dark text-nowrap mb-0">Back-End:</p>
-																	<span className="text-300">Node.js, Express, API Design, TypeScript</span>
+																	<span className="text-300">Node.js, API Design, TypeScript</span>
 																</div>
 															</li>
 															<li className="mb-3">

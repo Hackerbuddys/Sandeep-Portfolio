@@ -31,7 +31,7 @@ export default function Home2() {
 											&lt;/&gt;
 										</div>
 										<h1 className="fs-50 my-3">Senior <span className="text-linear-4">{'{'}Full Stack{'}'}</span>IT Support &amp; Social Media Designer<span className="flicker">_</span></h1>
-										<p className="mb-6 text-secondary-2">&lt;p&gt;<span className="text-dark">Full-Stack Developer skilled in </span> <span className="text-secondary-2">React</span>, <span className="text-secondary-2">Next.js</span>, <span className="text-secondary-2">Node.js</span>, and <span className="text-secondary-2">WordPress</span><span className="text-dark">... - delivering scalable web apps, responsive UI, and real business results.</span>&lt;/p&gt;</p>
+										<p className="mb-6 text-secondary-2">&lt;p&gt;<span className="text-dark">Full-Stack Developer skilled in </span> <span className="text-secondary-2">React</span>, <span className="text-secondary-2">Next.js</span>, <span className="text-secondary-2">Node.js</span>, and <span className="text-secondary-2">WordPress</span><span className="text-dark">... delivering scalable web apps, responsive UI, and real business results.</span>&lt;/p&gt;</p>
 										<div className="row">
 											<div className="col-7">
 												{/* Carausel Scroll */}
@@ -44,12 +44,12 @@ export default function Home2() {
 														</li>
 														<li className="carouselTicker__item">
 															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-																<img src="assets/imgs/home-page-2/hero-1/icon-2.svg" alt="brand" />
+																<img src="assets/imgs/home-page-2/hero-1/Typescript.png" alt="brand" />
 															</Link>
 														</li>
 														<li className="carouselTicker__item">
 															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-																<img src="assets/imgs/home-page-2/hero-1/icon-3.svg" alt="brand" />
+																<img src="assets/imgs/home-page-2/hero-1/Wordpress.png" alt="brand" />
 															</Link>
 														</li>
 														<li className="carouselTicker__item">
@@ -60,6 +60,36 @@ export default function Home2() {
 														<li className="carouselTicker__item">
 															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
 																<img src="assets/imgs/home-page-2/hero-1/icon-5.svg" alt="brand" />
+															</Link>
+														</li>
+														<li className="carouselTicker__item">
+															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
+																<img src="assets/imgs/home-page-2/hero-1/Bootstrap.png" alt="brand" />
+															</Link>
+														</li>
+														<li className="carouselTicker__item">
+															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
+																<img src="assets/imgs/home-page-2/hero-1/JavaScript.png" alt="brand" />
+															</Link>
+														</li>
+														<li className="carouselTicker__item">
+															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
+																<img src="assets/imgs/home-page-2/hero-1/Prisma.png" alt="brand" />
+															</Link>
+														</li>
+														<li className="carouselTicker__item">
+															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
+																<img src="assets/imgs/home-page-2/hero-1/PostgreSQL.png" alt="brand" />
+															</Link>
+														</li>
+														<li className="carouselTicker__item">
+															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
+																<img src="assets/imgs/home-page-2/hero-1/Linux.png" alt="brand" />
+															</Link>
+														</li>
+														<li className="carouselTicker__item">
+															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
+																<img src="assets/imgs/home-page-2/hero-1/Canva.png" alt="brand" />
 															</Link>
 														</li>
 													</ul>
