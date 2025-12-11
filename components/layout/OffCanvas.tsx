@@ -33,7 +33,7 @@ export default function OffCanvas({ isOffCanvas, handleOffCanvas }: any) {
 						</div>
 						<div className="contact-list">
 							<p className="text-400 fs-5 mb-2">Social</p>
-							<div className="https://wa.me/917506483883" target="_blank">
+							<div className="https://wa.me/917506483883">
 								<Link href="/http://facebook.com">
 									<i className="ri-whatsapp-fill fs-18" />
 								</Link>
